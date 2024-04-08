@@ -1,0 +1,33 @@
+.headerWrapper {
+    background-color: var(--background-color);
+    color: white;
+    padding: 20px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navCenter {
+    width: 30%;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navList {
+    list-style: none;
+}
+
+.navList a {
+    color: white;
+    text-decoration: none;
+}
+.navList a:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}

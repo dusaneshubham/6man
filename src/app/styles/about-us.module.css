@@ -1,0 +1,51 @@
+.aboutUsSectionWrapper {
+    padding: 30px auto;
+    background-color: var(--background-color);
+}
+
+.heading {
+    font-weight: 600;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.aboutUsWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.leftWrapper {
+    width: 40%;
+}
+
+.rightWrapper {
+    width: 60%;
+    background-color: var(--dark-green);
+    padding: 40px;
+}
+
+.rightWrapper h2 {
+    margin: 40px 0 20px 0;
+}
+
+.rightWrapper p {
+    line-height: 1.5;
+}
+
+.experience {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--gray);
+    text-align: center;
+    margin: 60px 0;
+}
+
+.logo {
+    background-color: var(--dark-green);
+    height: 600px;
+    font-size: 70px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
