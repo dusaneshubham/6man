@@ -5,11 +5,11 @@ import styles from './Footer.module.css'
 import Link from 'next/link'
 import TextInput from '../TextInput/TextInput'
 import { getCurrentYear } from '../../utils/date'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp, faInstagram, faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK, TWITTER_LINK, WHATSAPP_LINK } from '@/app/constants/social'
 
 const Footer = () => {
-  const rightIcon = () => {
-    return <button>Join</button>
-  }
 
   const currentYear: number = getCurrentYear();
 
@@ -20,7 +20,7 @@ const Footer = () => {
 
           <div className={styles.contactWrapper}>
             <h4 className={styles.heading}>Get in Touch</h4>
-            <TextInput placeholder="Enter Your Mail" rightIcon />
+            <TextInput placeholder="Enter Your Mail" rightIcon inputClassName={styles.footerInput} />
             <p className={styles.footerCopyRight}>&copy; {currentYear} NJ, All Rights Reserved</p>
           </div>
 
@@ -46,19 +46,19 @@ const Footer = () => {
             <h4 className={styles.heading}>Get in Touch</h4>
             <ul className={styles.footerLinks}>
               <li className={styles.footerList}>
-                <Link href="http://link.com">Whatsapp</Link>
+                <Link href={WHATSAPP_LINK}><FontAwesomeIcon icon={faWhatsapp} className={styles.socialIcon} /> Whatsapp</Link>
               </li>
               <li className={styles.footerList}>
-                <Link href="http://link.com">Instagram</Link>
+                <Link href={INSTAGRAM_LINK}><FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} /> Instagram</Link>
               </li>
               <li className={styles.footerList}>
-                <Link href="http://link.com">Facebook</Link>
+                <Link href={FACEBOOK_LINK}><FontAwesomeIcon icon={faFacebook} className={styles.socialIcon} /> Facebook</Link>
               </li>
               <li className={styles.footerList}>
-                <Link href="http://link.com">Twitter</Link>
+                <Link href={TWITTER_LINK}><FontAwesomeIcon icon={faTwitter} className={styles.socialIcon} /> Twitter</Link>
               </li>
               <li className={styles.footerList}>
-                <Link href="http://link.com">LinkedIn</Link>
+                <Link href={LINKEDIN_LINK}><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /> LinkedIn</Link>
               </li>
             </ul>
           </div>
