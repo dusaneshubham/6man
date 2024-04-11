@@ -4,7 +4,8 @@ import SectionWrapper from '../components/SectionWrapper/SectionWrapper'
 import styles from '../styles/contact.module.css';
 import TextInput from '../components/TextInput/TextInput';
 import Button from '../components/Button/Button';
-// import Calendar from 'react-calendar';
+import Calendar from 'react-calendar';
+// import 'react-calendar/dist/Calendar.css';
 
 // type ValuePiece = Date | null;
 

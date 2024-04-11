@@ -1,0 +1,21 @@
+.sectionTitleWrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.heading {
+    font-size: 40px;
+    @media screen and (max-width: 768px) {
+        font-size: 30px;
+    }
+}
+
+.subHeading {
+    margin-top: 15px;
+    max-width: 50ch;
+    line-height: 1.5;
+}
