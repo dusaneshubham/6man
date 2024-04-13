@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import Scroller from "./components/Scoller/Scroller";
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Scroller />
         <Footer />
       </body>
     </html>
