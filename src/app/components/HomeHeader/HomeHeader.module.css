@@ -1,0 +1,132 @@
+.object {
+    width: 300px;
+    animation: up-down 2s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 15px);
+    }
+}
+
+.background {
+    filter: brightness(50%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+}
+
+.homeHeader {
+    display: flex;
+    align-items: center;
+}
+
+.headerTitle {
+    font-size: 2.5vw;
+    font-weight: bolder;
+}
+
+.headerDescription {
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+}
+
+.down {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.down .goDown:before,
+.down .goDown:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 5vw;
+    background-color: var(--heading-color);
+    opacity: 0.07;
+}
+
+.down .goDown:after {
+    opacity: 1;
+    transform: scaleY(0);
+    animation: line 2s cubic-bezier(0.4, 0, 0.4, 0.65) infinite both;
+}
+
+@keyframes line {
+    10% {
+        transform: scaleY(0);
+        transform-origin: center top;
+    }
+
+    50% {
+        transform-origin: center top;
+        transform: scale(1);
+    }
+
+    51% {
+        transform-origin: center bottom;
+    }
+
+    100% {
+        transform-origin: center bottom;
+        transform: scaleY(0);
+    }
+}
+
+.hpDown {
+    opacity: 0;
+    animation: fadeIn 1s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    -webkit-animation: fadeIn 1s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    -moz-animation: fadeIn 1s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    -o-animation: fadeIn 1s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0em);
+    }
+}
+
+@media (max-width: 1199px) {
+    .hpHeader .goDown {
+        display: flex !important;
+    }
+
+    .hpHeader .hpDown {
+        top: -12% !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .hpHeader .hpDown {
+        display: none !important;
+    }
+}
+
+.scrollText {
+    writing-mode: vertical-lr;
+    font-size: 0.7vw;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    z-index: 3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    width: fit-content;
+}
