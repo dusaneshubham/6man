@@ -8,7 +8,7 @@ const HomeHeader = () => {
       <SectionWrapper className="container">
         <img src="galaxy_background.png" alt="galaxy background" className={styles.background} />
         <div className="row">
-          <div className="col-4">
+          <div className="col-lg-4">
             <img className={`${styles.object} img-fluid`} src="robot.png" width="100" />
           </div>
           <div className={`col-6 ${styles.homeHeader}`}>
@@ -26,7 +26,7 @@ const HomeHeader = () => {
             </div>
           </div>
         </div>
-      </SectionWrapper>
+      </SectionWrapper> 
     </>
   );
 }
