@@ -6,13 +6,13 @@ type ServiceCardType = {
     title?: ReactNode | string;
     description?: ReactNode | string;
     className?: string;
-    key?: Number;
+    keys?: number;
 }
 
-const ServiceCard = ({ img = "", title = "", description = "", className = "", key = 0 }: ServiceCardType) => {
+const ServiceCard = ({ img = "", title = "", description = "", className = "", keys = 0 }: ServiceCardType) => {
     return (
         <>
-            <div className={`${styles.card} ${className}`} id={"card" + key}>
+            <div className={`${styles.card} ${className}`} id={"card" + keys}>
                 <article>
                     <h2 className={styles.title}>{title}</h2>
                     <div className={styles.pic}>

@@ -1,3 +1,7 @@
+.homeHeadersWrapper{
+    padding: 5vh 0;
+}
+
 .object {
     width: 300px;
     animation: up-down 2s infinite ease-in-out;
@@ -114,11 +118,14 @@
 }
 
 @media (max-width: 991px) {
-    .hpHeader .hpDown, .object, .down {
+
+    .hpHeader .hpDown,
+    .object,
+    .down {
         display: none !important;
     }
 
-    .homeHeader{
+    .homeHeader {
         width: 100% !important;
         margin-top: 100px;
         padding: 0 20px;

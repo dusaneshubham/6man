@@ -6,8 +6,25 @@
 }
 
 :root {
-  --background-color: rgb(0,4,3);
+  --background-color: #01060b;
   --secondary-color: #726f6f;
   --gray: #A4A4A4;
   --dark-green: #071522;
+  --marquee-width: 100vw;
+  --marquee-height: 20vh;
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 4.5s);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+}
+
+body {
+  background-color: var(--background-color) !important;
 }

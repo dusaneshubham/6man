@@ -5,7 +5,7 @@ import styles from './HomeHeader.module.css'
 const HomeHeader = () => {
   return (
     <>
-      <SectionWrapper className="container">
+      <SectionWrapper className={`${styles.homeHeadersWrapper} container`}>
         <img src="galaxy_background.png" alt="galaxy background" className={styles.background} />
         <div className="row">
           <div className="col-lg-4">
