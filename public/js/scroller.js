@@ -14,4 +14,8 @@ $(() => {
         $("#scrollToTopButton img").css({ "transform": "rotate(" + scrollPercent * 10 + "deg)" });
         $("#percentageIndicator").html(Math.round(scrollPercent) + "%");
     }
+
+    $("#scrollToTopButton").on("click", () => {
+        $("html, body").animate({ scrollTop: 0 }, 0);
+    })
 });

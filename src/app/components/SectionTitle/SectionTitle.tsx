@@ -1,17 +1,17 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, isValidElement } from 'react'
 import styles from './SectionTitle.module.css';
 
 type SectionTitleType = {
-    heading?: string;
+    heading?: ReactNode | string;
     subHeading?: ReactNode | string;
+    className?: string;
 }
 
-const SectionTitle = ({ heading = '', subHeading = '' }: SectionTitleType) => {
+const SectionTitle = ({ heading = '', subHeading = '', className = '' }: SectionTitleType) => {
     return (
-        <div className={styles.sectionTitleWrapper}>
-            <h2 className={styles.heading}>{heading}</h2>
-            {typeof heading === 'string' ? <p className={styles.subHeading}>{subHeading}</p> : <>{subHeading}</>}
-            
+        <div className={`${styles.sectionTitleWrapper} ${className}`}>
+            {isValidElement(heading) ? heading : <h2 className={styles.heading}>{heading}</h2>}
+            {isValidElement(subHeading) ? subHeading : <p className={styles.subHeading}>{subHeading}</p>}
         </div>
     )
 }

@@ -1,0 +1,20 @@
+.serviceSectionWrapper {
+    background-color: var(--background-color);
+    max-height: fit-content;
+    padding-top: 100px;
+}
+
+.titleSubHeading {
+    color: var(--gray);
+    margin-top: 10px;
+    line-height: 1.5;
+    max-width: 50ch;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

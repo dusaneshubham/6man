@@ -9,9 +9,11 @@
 
 .heading {
     font-size: 40px;
+    color: white;
     @media screen and (max-width: 768px) {
         font-size: 30px;
     }
+    max-width: 30ch;
 }
 
 .subHeading {

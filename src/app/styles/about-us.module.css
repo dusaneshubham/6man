@@ -7,11 +7,13 @@
     font-weight: 600;
     text-align: center;
     padding: 60px 0;
+    color: white;
 }
 
 .aboutUsWrapper {
     display: flex;
     gap: 20px;
+    color: white;
     @media screen and (max-width: 1024px) {
         flex-direction: column;
     }

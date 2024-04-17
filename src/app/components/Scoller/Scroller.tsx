@@ -10,7 +10,7 @@ const Scroller = () => {
         <span id="percentageIndicator" className={styles.percentageIndicator}>0%</span>
       </div>
 
-      <Script src="/js/jquery-3.6.0.min.js" ></Script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
       <Script src="/js/scroller.js" ></Script>
     </>
   )
