@@ -43,7 +43,6 @@ const ServicesSection = () => {
                 <div className={`${styles.cards} py-5`}>
                     {
                         services.map((service, index) => {
-                            console.log({index})
                             return (
                                 <ServiceCard
                                     img={service.img}

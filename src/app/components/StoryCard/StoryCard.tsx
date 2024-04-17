@@ -14,7 +14,7 @@ const StoryCard = ({ img = '', desciption = '', year = '', className = '', keys 
         <>
             <div className={`${styles.storyWrapper} ${className}`} id={`story-${keys}`}>
                 {typeof img == "string" ? <img src={img} className={styles.imgWrapper} /> : <>{img}</>}
-                <div className="p-3">
+                <div className="p-3 text-white">
                     {isValidElement(desciption) ? desciption : <span className='float-start '>{desciption}</span>}
                     {isValidElement(desciption) ? year : <span className='float-end '>{year}</span>}
                 </div>
