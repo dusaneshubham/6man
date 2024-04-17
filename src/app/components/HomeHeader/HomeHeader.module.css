@@ -29,6 +29,7 @@
 }
 
 .homeHeader {
+    color: white;
     display: flex;
     align-items: center;
 }

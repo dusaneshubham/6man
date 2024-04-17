@@ -1,6 +1,12 @@
 import React from 'react'
 import styles from './BlogsSection.module.css';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faUser } from "@fortawesome/free-solid-svg-icons";
+import SectionWrapper from '../SectionWrapper/SectionWrapper';
+import { blogsData } from './blogsData';
 
 const BlogsSection = () => {
   const blogSubHeading = (
@@ -10,9 +16,28 @@ const BlogsSection = () => {
   )
 
   return (
-    <div className={styles.blogsSectionWrapper}>
+    <SectionWrapper className={styles.blogsSectionWrapper}>
       <SectionTitle heading="See Our Blog" subHeading={blogSubHeading} />
-    </div>
+      <div className={styles.blogsWrapper}>
+
+        {blogsData.length && blogsData.map((blog)=>(
+          <div className={styles.blogDiv}>
+          <div className={styles.blogImage}>
+            <Image src={blog?.illustration?.url} layout="fill" alt={blog?.illustration?.alt} />
+          </div>
+          <div className={styles.blogBody}>
+            <p className={styles.blogAuthor}><FontAwesomeIcon icon={faUser} /> {blog?.authorName}</p>
+            <h5 className={styles.blogHeading}>How To Develop An On-Demand Home Service With Features?</h5>
+            <p className={styles.blogDescription}>{blog.description}</p>
+            <Link href="/blog" className={styles.blogReadMoreButton}>
+              Read More <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+          </div>
+        </div>
+        ))}
+
+      </div>
+    </SectionWrapper>
   )
 }
 

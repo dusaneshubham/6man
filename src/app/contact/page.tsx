@@ -4,16 +4,10 @@ import SectionWrapper from '../components/SectionWrapper/SectionWrapper'
 import styles from '../styles/contact.module.css';
 import TextInput from '../components/TextInput/TextInput';
 import Button from '../components/Button/Button';
-import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css';
-
-// type ValuePiece = Date | null;
-
-// type Value = ValuePiece | [ValuePiece, ValuePiece];
+import Calendar from "../components/Calendar/Calendar";
 
 const Contact = () => {
   const [date, setDate] = useState(new Date());
-  const onChange = (newDate: any) => setDate(newDate);
 
   return (
     <SectionWrapper className={styles.contactSectionWrapper}>
@@ -22,14 +16,7 @@ const Contact = () => {
       <div className={styles.contactWrapper}>
         <div className={styles.leftWrapper}>
           <div className={styles.left}>
-            {/* <div className={styles.calendarContainer}>
-              <Calendar
-                onChange={onChange}
-                value={date}
-                className={styles.calendar}
-                tileClassName={({ date }) => (date.getDay() === 0 ? styles.weekend : styles.weekday)}
-              />
-            </div> */}
+            <Calendar />
           </div>
         </div>
         <div className={styles.rightWrapper}>
