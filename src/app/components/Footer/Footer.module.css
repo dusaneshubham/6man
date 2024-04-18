@@ -48,7 +48,7 @@
 .footerInput{
     width: 70% !important;
     @media screen and (max-width: 480px) {
-        width: 80% !important;
+        width: 75% !important;
     }
 }
 
