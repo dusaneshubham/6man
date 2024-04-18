@@ -4,6 +4,7 @@ import styles from './Button.module.css';
 interface ButtonProps {
   label: string;
   className?: string; // Optional custom className
+  onClick?: () => {};
 }
 
 const Button = ({ label, className }: ButtonProps) => {

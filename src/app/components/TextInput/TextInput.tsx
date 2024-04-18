@@ -9,8 +9,7 @@ interface TextInputProps {
     rightIcon?: any;
     name?: string;
     value?: string;
-    rows?: number,
-    cols?: number;
+    onChange?: (e:any) => void;
 }
 
 const TextInput = ({
@@ -21,6 +20,7 @@ const TextInput = ({
     rightIcon,
     name,
     value,
+    onChange,
 }: TextInputProps) => {
     return (
         <div className={`${styles.inputWrapper} ${className}`}>
@@ -28,7 +28,8 @@ const TextInput = ({
                 type === 'textarea' ?
                     <textarea
                         placeholder={placeholder}
-                        className={styles.input}
+                        onChange={onChange}
+                        className={`${styles.input} ${inputClassName}`}
                     />
                     :
                     <input
@@ -37,6 +38,7 @@ const TextInput = ({
                         value={value}
                         placeholder={placeholder}
                         className={`${styles.input} ${inputClassName}`}
+                        onChange={onChange}
                     />
             }
 

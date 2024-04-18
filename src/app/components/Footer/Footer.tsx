@@ -1,5 +1,4 @@
-// "use server"
-import React from 'react'
+import React, { useState } from 'react'
 import SectionWrapper from '../SectionWrapper/SectionWrapper'
 import styles from './Footer.module.css'
 import Link from 'next/link'
@@ -10,7 +9,6 @@ import { faWhatsapp, faInstagram, faFacebook, faTwitter, faLinkedin } from '@for
 import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK, TWITTER_LINK, WHATSAPP_LINK } from '@/app/constants/social'
 
 const Footer = () => {
-
   const currentYear: number = getCurrentYear();
 
   return (
