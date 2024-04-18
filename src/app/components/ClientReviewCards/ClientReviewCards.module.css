@@ -1,0 +1,64 @@
+
+.testimonialGroup{
+    background-color: var(--background-color);
+    color: white;
+}
+.testimonialGroup h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonialGroup .sliderWrapperCard {
+    border-radius: 16px;
+    box-shadow: #959da533 0px 8px 24px;
+    padding: 30px 25px;
+    margin: 10px;
+    border: 1px solid gray;
+}
+
+.testimonialGroup .sliderWrapperCard h5 {
+    font-size: 20px;
+}
+
+.testimonialGroup .mySwiper {
+    padding-bottom: 90px;
+}
+
+.swiperButtonNext:after,
+.swiperButtonPrev:after {
+    font-size: 25px !important;
+    line-height: 1;
+}
+
+.swiperButtonNext,
+.swiperButtonPrev {
+    bottom: 0px;
+    top: auto;
+    color: gray;
+}
+
+.testimonialGroup .mySwiper .swiperButtonNext {
+    right: 40%;
+}
+
+.testimonialGroup .mySwiper .swiperButtonPrev {
+    left: 40%;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .testimonialGroup .mySwiper .swiperButtonNext {
+        right: 20%;
+    }
+
+    .testimonialGroup .mySwiper .swiperButtonPrev {
+        left: 20%;
+    }
+}
+
+.swiper-pagination-bullet{
+    background-color: white !important;
+}
+
+.starIcon{
+    color: #FBCF39;
+}

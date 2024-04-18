@@ -4,6 +4,7 @@ import HomeHeader from './components/HomeHeader/HomeHeader';
 import ServicesSection from './components/ServicesSection/ServicesSection';
 import BlogsSection from './components/BlogsSection/BlogsSection';
 import SuccessStorySection from './components/SuccessStorySection/SuccessStorySection';
+import ClientReview from './components/ClientReview/ClientReview';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HomeHeader />
       <ServicesSection />
       <SuccessStorySection />
+      <ClientReview />
       <BlogsSection />
     </main>
   );

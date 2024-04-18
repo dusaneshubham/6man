@@ -8,22 +8,34 @@ const ServicesSection = () => {
 
     const services = [
         {
-            "img": "/services/service-1.png",
+            "img": {
+                url: "/services/service-1.png",
+                alt: "service-1"
+            },
             "title": "Web Design & Development",
             "description": "From beautiful creative concepts to practical user-driven site designs."
         },
         {
-            "img": "/services/service-2.png",
+            "img": {
+                url: "/services/service-2.png",
+                alt: "service-2"
+            },
             "title": "Software Development",
             "description": "From beautiful creative concepts to practical user-driven site designs."
         },
         {
-            "img": "/services/service-3.png",
+            "img": {
+                url: "/services/service-3.png",
+                alt: "service-3"
+            },
             "title": "Android Development",
             "description": "From beautiful creative concepts to practical user-driven site designs."
         },
         {
-            "img": "/services/service-4.png",
+            "img": {
+                url: "/services/service-4.png",
+                alt: "service-4"
+            },
             "title": "Data analyst",
             "description": "From beautiful creative concepts to practical user-driven site designs."
         }
@@ -42,10 +54,11 @@ const ServicesSection = () => {
                 <Button label='Start Project' />
                 <div className={`${styles.cards} py-5`}>
                     {
-                        services.map((service, index) => {
+                        services.length && services.map((service, index) => {
+                            console.log({img: service?.img})
                             return (
                                 <ServiceCard
-                                    img={service.img}
+                                    img={service?.img}
                                     title={service.title}
                                     description={service.description}
                                     keys={index}
