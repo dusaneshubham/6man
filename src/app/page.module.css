@@ -9,8 +9,6 @@
   --smooth-color: #f9f9f9;
   --reverse-color: #f9f9f9;
   --reverse-heading-color: #fff;
-}
-
-.swiper-pagination-bullet {
-  background-color: white !important;
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-theme-color: white;
 }
