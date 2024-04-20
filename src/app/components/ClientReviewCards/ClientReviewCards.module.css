@@ -37,20 +37,20 @@
     color: gray;
 }
 
-.testimonialGroup .mySwiper .swiperButtonNext {
+.swiperButtonNext {
     right: 40%;
 }
 
-.testimonialGroup .mySwiper .swiperButtonPrev {
+.swiperButtonPrev {
     left: 40%;
 }
 
 @media only screen and (max-width: 991.98px) {
-    .testimonialGroup .mySwiper .swiperButtonNext {
+    .swiperButtonNext {
         right: 20%;
     }
 
-    .testimonialGroup .mySwiper .swiperButtonPrev {
+    .swiperButtonPrev {
         left: 20%;
     }
 }
