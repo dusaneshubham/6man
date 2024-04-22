@@ -1,11 +1,10 @@
 import React from 'react'
-import SectionWrapper from '../SectionWrapper/SectionWrapper'
 import styles from './HomeHeader.module.css'
 
 const HomeHeader = () => {
   return (
     <>
-      <SectionWrapper className={`${styles.homeHeadersWrapper} container`}>
+      <div className={`${styles.homeHeadersWrapper} container`}>
         <img src="galaxy_background.png" alt="galaxy background" className={styles.background} />
         <div className="row">
           <div className="col-lg-4">
@@ -26,7 +25,7 @@ const HomeHeader = () => {
             </div>
           </div>
         </div>
-      </SectionWrapper> 
+      </div> 
     </>
   );
 }
