@@ -55,7 +55,6 @@ const ServicesSection = () => {
                 <div className={`${styles.cards} py-5`}>
                     {
                         services.length && services.map((service, index) => {
-                            console.log({img: service?.img})
                             return (
                                 <ServiceCard
                                     img={service?.img}
