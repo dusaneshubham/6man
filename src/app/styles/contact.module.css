@@ -2,6 +2,7 @@
     padding: 30px auto;
     background-color: var(--background-color);
     color: white;
+    filter: brightness(10px)
 }
 
 .heading {
@@ -27,6 +28,10 @@
 }
 
 .rightWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 50%;
     background-color: var(--dark-green);
     padding: 40px;

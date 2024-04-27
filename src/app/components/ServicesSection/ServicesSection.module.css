@@ -23,6 +23,7 @@
 .testimonialGroup {
     background-color: var(--background-color);
     color: white;
+    padding: 30px;
 }
 
 .testimonialGroup h2 {

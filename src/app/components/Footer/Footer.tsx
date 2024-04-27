@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SectionWrapper from '../SectionWrapper/SectionWrapper'
 import styles from './Footer.module.css'
+import bg from '../../assets/images/footer-bg.jpeg'
 import Link from 'next/link'
 import { getCurrentYear } from '../../utils/date'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +13,7 @@ import Button from '../Button/Button'
 const Footer = () => {
   const currentYear: number = getCurrentYear();
 
+
   const bookACall = (
     <p className='d-flex align-items-center m-0'>
       <FontAwesomeIcon icon={faPhone} className='rounded-circle bg-white text-black p-2 mx-3 fs-5' /> Book a Call
@@ -19,8 +21,8 @@ const Footer = () => {
   );
 
   return (
-    <div className={`${styles.footerWrapper} pt-5`}>
-      <SectionWrapper className='border-top'>
+    <div className={`${styles.footerWrapper}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${bg.src})` }}>
+      <SectionWrapper>
         <div className={styles.footer}>
 
           <div className={styles.contactWrapper}>
@@ -69,7 +71,7 @@ const Footer = () => {
 
         <div className={styles.footerBottom}>
           <h6>@6mansinfotech.com</h6>
-          <Button label={bookACall} className='px-3'/>
+          <Button label={bookACall} className='px-3' />
         </div>
       </SectionWrapper>
     </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './ServicesSection.module.css'
 import SectionTitle from '../SectionTitle/SectionTitle'
-import Button from '../Button/Button'
 import ServiceCard from '../ServiceCard/ServiceCard'
 import Script from 'next/script'
 
