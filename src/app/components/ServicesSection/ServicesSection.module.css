@@ -1,7 +1,6 @@
 .serviceSectionWrapper {
     background-color: var(--background-color);
     max-height: fit-content;
-    padding-top: 100px;
 }
 
 .titleSubHeading {

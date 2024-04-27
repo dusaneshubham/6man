@@ -32,7 +32,7 @@ const Footer = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className={styles.footerList}>
-                <Link href="/">Services</Link>
+                <Link href="/services">Services</Link>
               </li>
               <li className={styles.footerList}>
                 <Link href="/contact">Contact</Link>
