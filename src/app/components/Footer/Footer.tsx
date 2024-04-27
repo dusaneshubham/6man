@@ -17,7 +17,7 @@ const Footer = () => {
         <div className={styles.footer}>
 
           <div className={styles.contactWrapper}>
-            <h4 className={styles.heading}>Get in Touch</h4>
+            <h4 className={styles.heading}>Connect with Us</h4>
             <TextInput placeholder="Enter Your Mail" rightIcon inputClassName={styles.footerInput} />
             <p className={styles.footerCopyRight}>&copy; {currentYear} NJ, All Rights Reserved</p>
           </div>
@@ -41,22 +41,22 @@ const Footer = () => {
           </div>
 
           <div className={styles.socialLinksWrapper}>
-            <h4 className={styles.heading}>Get in Touch</h4>
+            <h4 className={styles.heading}>Connect with Us</h4>
             <ul className={styles.footerLinks}>
               <li className={styles.footerList}>
-                <Link href={WHATSAPP_LINK}><FontAwesomeIcon icon={faWhatsapp} className={styles.socialIcon} /> Whatsapp</Link>
+                <Link href={WHATSAPP_LINK}><FontAwesomeIcon icon={faWhatsapp} className={styles.socialIcon} /></Link>
               </li>
               <li className={styles.footerList}>
-                <Link href={INSTAGRAM_LINK}><FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} /> Instagram</Link>
+                <Link href={INSTAGRAM_LINK}><FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} /></Link>
               </li>
               <li className={styles.footerList}>
-                <Link href={FACEBOOK_LINK}><FontAwesomeIcon icon={faFacebook} className={styles.socialIcon} /> Facebook</Link>
+                <Link href={FACEBOOK_LINK}><FontAwesomeIcon icon={faFacebook} className={styles.socialIcon} /></Link>
               </li>
               <li className={styles.footerList}>
-                <Link href={TWITTER_LINK}><FontAwesomeIcon icon={faTwitter} className={styles.socialIcon} /> Twitter</Link>
+                <Link href={TWITTER_LINK}><FontAwesomeIcon icon={faTwitter} className={styles.socialIcon} /></Link>
               </li>
               <li className={styles.footerList}>
-                <Link href={LINKEDIN_LINK}><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /> LinkedIn</Link>
+                <Link href={LINKEDIN_LINK}><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /></Link>
               </li>
             </ul>
           </div>

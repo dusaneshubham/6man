@@ -1,30 +1,30 @@
-// console.log(Swiper);
-
-var swiper = new Swiper(".mySwiper", {
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
-    loop: true,
-    breakpoints: {
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 30
+$(function () {
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination"
         },
-        756: {
-            slidesPerView: 2,
-            spaceBetween: 30
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
         },
-        991: {
-            slidesPerView: 3,
-            spaceBetween: 20
-        },
-        1200: {
-            slidesPerView: 3,
-            spaceBetween: 25
+        loop: true,
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            756: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 25
+            }
         }
-    }
+    })
 });

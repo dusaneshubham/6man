@@ -47,9 +47,9 @@ const ClientReviewCards = () => {
                 </div>
 
             </section>
-            <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></Script>
-            <Script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></Script>
-            <Script src="/js/swapper.js" ></Script>
+            <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></Script>
+            <Script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' defer></Script>
+            <Script src="/js/swapper.js" defer></Script>
         </>
     )
 }

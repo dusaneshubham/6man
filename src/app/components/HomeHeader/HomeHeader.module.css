@@ -1,5 +1,14 @@
-.homeHeadersWrapper{
-    padding: 5vh 0;
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+}
+
+.homeHeadersWrapper {
+    padding: 20vh 0;
 }
 
 .object {
@@ -16,16 +25,6 @@
     100% {
         transform: translate(0, 15px);
     }
-}
-
-.background {
-    filter: brightness(50%);
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -2;
 }
 
 .homeHeader {
