@@ -35,9 +35,6 @@ const Header = () => {
                             <li className={`${styles.navList} mx-3`}>
                                 <Link href="/contact">Contact Us</Link>
                             </li>
-                            <li className={`${styles.navList} mx-3`}>
-                                <Button src='' label="Start Project" />
-                            </li>
                         </ul>
                     </div>
                 </SectionWrapper>

@@ -8,8 +8,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* display: grid; */
-    /* grid-template-columns: 2fr 1fr 1fr 1fr; */
+}
+
+.addressWrapper{
+    padding: 0 10px;
+    width: 30vw;
 }
 
 .contactWrapper {
@@ -29,6 +32,7 @@
 .footerList {
     list-style: none;
     margin: 12px 0;
+    float: inline-start;
 }
 
 .footerList a {
@@ -54,4 +58,10 @@
 
 .socialIcon {
     margin-right: 8px;
+}
+
+.footerBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

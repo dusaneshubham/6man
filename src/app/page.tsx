@@ -11,8 +11,8 @@ export default function Home() {
     <main className={styles.main}>
       <HomeHeader />
       <SuccessStorySection />
-      <ClientReview />
-      <BlogsSection />
+      {/* <ClientReview /> */}
+      {/* <BlogsSection /> */}
     </main>
   );
 }

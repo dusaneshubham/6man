@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styles from './Button.module.css';
 import Link from 'next/link';
 
 interface ButtonProps {
-  label: string;
+  label: string | ReactNode;
   src?: string;
   className?: string; // Optional custom className
   onClick?: () => {};
@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const Button = ({ label, src = '', className = '' }: ButtonProps) => {
   return (
-    <div className={`${styles.glowingWrapper} ${styles.glowingWrapperActive} mt-30`}>
+    <div className={`${styles.glowingWrapper} ${styles.glowingWrapperActive} mt-30 ${className}`}>
       <div className={styles.glowingWrapperAnimations}>
         <div className={styles.glowingWrapperGlow}></div>
         <div className={styles.glowingWrapperMaskWrapper}>
@@ -23,7 +23,7 @@ const Button = ({ label, src = '', className = '' }: ButtonProps) => {
       </div>
       <Link href={src}
         className={styles.glowingWrapperButton}>
-        <div className={styles.buttonText}>Start your Project</div>
+        <div className={styles.buttonText}>{label}</div>
       </Link>
     </div>
 

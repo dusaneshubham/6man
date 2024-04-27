@@ -15,6 +15,8 @@
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 4.5s);
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-theme-color: white;
 }
 
 @media (max-width: 600px) {

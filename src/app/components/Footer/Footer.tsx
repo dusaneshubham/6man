@@ -2,37 +2,61 @@ import React, { useState } from 'react'
 import SectionWrapper from '../SectionWrapper/SectionWrapper'
 import styles from './Footer.module.css'
 import Link from 'next/link'
-import TextInput from '../TextInput/TextInput'
 import { getCurrentYear } from '../../utils/date'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp, faInstagram, faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK, TWITTER_LINK, WHATSAPP_LINK } from '@/app/constants/social'
+import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK } from '@/app/constants/social'
+import { faPhone, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import Button from '../Button/Button'
 
 const Footer = () => {
   const currentYear: number = getCurrentYear();
 
+  const bookACall = (
+    <p className='d-flex align-items-center m-0'>
+      <FontAwesomeIcon icon={faPhone} className='rounded-circle bg-white text-black p-2 mx-3 fs-5' /> Book a Call
+    </p>
+  );
+
   return (
-    <div className={styles.footerWrapper}>
-      <SectionWrapper>
+    <div className={`${styles.footerWrapper} pt-5`}>
+      <SectionWrapper className='border-top'>
         <div className={styles.footer}>
 
           <div className={styles.contactWrapper}>
             <h4 className={styles.heading}>Connect with Us</h4>
-            <TextInput placeholder="Enter Your Mail" rightIcon inputClassName={styles.footerInput} />
-            <p className={styles.footerCopyRight}>&copy; {currentYear} NJ, All Rights Reserved</p>
+            <p>
+              <FontAwesomeIcon icon={faPhone} className={styles.socialIcon} />
+              +1 (617) 681-4114
+            </p>
+            <ul className={styles.footerLinks}>
+              <li className={`${styles.footerList} float-start me-3 fs-4`}>
+                <Link href={INSTAGRAM_LINK}><FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} /></Link>
+              </li>
+              <li className={`${styles.footerList} float-start me-3 fs-4`}>
+                <Link href={FACEBOOK_LINK}><FontAwesomeIcon icon={faFacebook} className={styles.socialIcon} /></Link>
+              </li>
+              <li className={`${styles.footerList} float-start me-3 fs-4`}>
+                <Link href={LINKEDIN_LINK}><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /></Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.addressWrapper}>
+            <h4 className={styles.heading}>Address</h4>
+            <p>607 Boylston St, Suite 146L Boston, MA 02116</p>
           </div>
 
           <div className={styles.pageLinksWrapper}>
             <h4 className={styles.heading}>Links</h4>
             <ul className={styles.footerLinks}>
               <li className={styles.footerList}>
-                <Link href="/about-us">About Us</Link>
+                <Link href="/">Home</Link><span className='m-2'>|</span>
               </li>
               <li className={styles.footerList}>
-                <Link href="/">Home</Link>
+                <Link href="/about-us">About Us</Link><span className='m-2'>|</span>
               </li>
               <li className={styles.footerList}>
-                <Link href="/services">Services</Link>
+                <Link href="/services">Services</Link><span className='m-2'>|</span>
               </li>
               <li className={styles.footerList}>
                 <Link href="/contact">Contact</Link>
@@ -40,26 +64,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className={styles.socialLinksWrapper}>
-            <h4 className={styles.heading}>Connect with Us</h4>
-            <ul className={styles.footerLinks}>
-              <li className={styles.footerList}>
-                <Link href={WHATSAPP_LINK}><FontAwesomeIcon icon={faWhatsapp} className={styles.socialIcon} /></Link>
-              </li>
-              <li className={styles.footerList}>
-                <Link href={INSTAGRAM_LINK}><FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} /></Link>
-              </li>
-              <li className={styles.footerList}>
-                <Link href={FACEBOOK_LINK}><FontAwesomeIcon icon={faFacebook} className={styles.socialIcon} /></Link>
-              </li>
-              <li className={styles.footerList}>
-                <Link href={TWITTER_LINK}><FontAwesomeIcon icon={faTwitter} className={styles.socialIcon} /></Link>
-              </li>
-              <li className={styles.footerList}>
-                <Link href={LINKEDIN_LINK}><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /></Link>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <hr className='bg-white' />
+
+        <div className={styles.footerBottom}>
+          <h6>@6mansinfotech.com</h6>
+          <Button label={bookACall} className='px-3'/>
         </div>
       </SectionWrapper>
     </div>
