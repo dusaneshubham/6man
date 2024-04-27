@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import styles from './Calendar.module.css'
 
-const Calendar = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date())
+type ValuePiece = Date | null;
+
+type Value = ValuePiece | [ValuePiece, ValuePiece];
+
+function CalendarSelect() {
+  const [value, onChange] = useState<Value>(new Date());  // value field will contain the selected date
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <StaticDatePicker
-        orientation="portrait"
-        disablePast
-        disableHighlightToday
-        onChange={(value) => { setSelectedDate(value?.$d) }}
-      />
-    </LocalizationProvider>
+    <div>
+      <Calendar onChange={onChange} value={value} className={styles.reactCalendar} />
+    </div>
   );
 }
 
-export default Calendar;
+export default CalendarSelect;
