@@ -4,10 +4,9 @@ import SectionWrapper from '../components/SectionWrapper/SectionWrapper'
 import styles from '../styles/contact.module.css';
 import TextInput from '../components/TextInput/TextInput';
 import Button from '../components/Button/Button';
-import Calendar from "../components/Calendar/Calendar";
+import CalendarSelect from "../components/Calendar/Calendar";
 
 const Contact = () => {
-  const [date, setDate] = useState(new Date());
   const [contactDetails, setContactDetails] = useState({ name: '', email: '', message: '' })
 
   const onChangeName = (event: any) => {
@@ -29,7 +28,7 @@ const Contact = () => {
       <div className={styles.contactWrapper}>
         <div className={styles.leftWrapper}>
           <div className={styles.left}>
-            <Calendar />
+            <CalendarSelect />
           </div>
         </div>
         <div className={styles.rightWrapper}>

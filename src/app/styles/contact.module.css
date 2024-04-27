@@ -47,7 +47,6 @@
 .left {
     background-color: var(--dark-green);
     height: 100%;
-    font-size: 70px;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -62,4 +61,8 @@
 
 .startProjectButton {
     margin: 20px auto;
+}
+
+.react-calendar {
+    width: 100%;
 }
