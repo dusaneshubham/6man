@@ -23,30 +23,20 @@
     list-style: none;
 }
 
-.navList a {
+.navList > a {
     color: silver;
     text-decoration: none;
-    margin: 0 0.7vw;
+    padding: 0.7vw;
+    border: 0.1px solid transparent;
 }
 
-.navList a:hover {
-    color: var(--primary-color);
+.navList > a:hover,
+.navList > a.active {
+    color: white;
     cursor: pointer;
-}
-
-.navList a::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0%;
-    background-color: white;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-    margin: 0 0 0 10%;
-}
-
-.navList a:hover::after {
-    width: 80%;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 10px;
+    border: 1px solid gray;
 }
 
 .hamburger div {
@@ -67,7 +57,7 @@
         position: absolute;
         cursor: pointer;
         right: 5%;
-        top: 7.6%;
+        top: 10%;
         transform: translate(-5%, -50%);
         z-index: 100;
         transition: all 0.7s ease;

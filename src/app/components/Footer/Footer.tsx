@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react'
 import SectionWrapper from '../SectionWrapper/SectionWrapper'
 import styles from './Footer.module.css'
@@ -7,8 +8,9 @@ import { getCurrentYear } from '../../utils/date'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK } from '@/app/constants/social'
-import { faPhone, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import Button from '../Button/Button'
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   const currentYear: number = getCurrentYear();
@@ -21,7 +23,15 @@ const Footer = () => {
   );
 
   return (
-    <div className={`${styles.footerWrapper}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${bg.src})` }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        opacity: { duration: 0.2 },
+        ease: "easeInOut",
+      }}
+      className={`${styles.footerWrapper}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url(${bg.src})` }}>
       <SectionWrapper>
         <div className={styles.footer}>
 
@@ -74,7 +84,7 @@ const Footer = () => {
           <Button label={bookACall} className='px-3' />
         </div>
       </SectionWrapper>
-    </div>
+    </motion.div>
   )
 }
 

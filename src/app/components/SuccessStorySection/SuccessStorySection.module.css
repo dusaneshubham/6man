@@ -1,5 +1,4 @@
 .successStorySectionWrapper {
-    background-color: var(--background-color);
     max-height: fit-content;
     position: relative;
     padding-top: 100px;
@@ -19,6 +18,16 @@
     position: relative;
     width: 100vw;
     max-width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .projectWrapperBg{
+        display: none;
+    }
+
+    .successStorySectionWrapper {
+        padding-top: 0px;
+    }
 }
 
 .rotatingImg1 {

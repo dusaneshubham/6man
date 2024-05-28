@@ -19,6 +19,9 @@
   --marquee-animation-duration: calc(var(--marquee-elements) * 4.5s);
   --swiper-pagination-bullet-inactive-color: white;
   --swiper-theme-color: white;
+  --swiper-pagination-bottom: 0px;
+  --white-color: #fff;
+  --black-color: #000000;
 }
 
 @media (max-width: 600px) {
@@ -31,6 +34,14 @@
 
 body {
   background-color: var(--background-color) !important;
+  scroll-behavior: smooth;
+}
+
+.infinite-space-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* To hide the cancel option in calendar */
@@ -40,4 +51,19 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.modal {
+  width: 100vw;
+  margin: auto;
+}
+
+.modal-dialog{
+  width: 85vw;
+  max-width: none;
+  margin: 30px auto;
+}
+
+.modal-content{
+  width: 100%;
 }

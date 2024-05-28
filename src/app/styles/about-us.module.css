@@ -1,6 +1,6 @@
 .aboutUsSectionWrapper {
-    padding: 30px auto;
-    background-color: var(--background-color);
+    width: 100%;
+    padding: 40px 0;
 }
 
 .heading {
@@ -10,67 +10,83 @@
     color: white;
 }
 
-.aboutUsWrapper {
+.aboutUsCards {
+    height: max-content;
+    overflow: hidden;
+}
+
+.aboutUsHeading {
+    height: 73vh;
     display: flex;
-    gap: 20px;
-    color: white;
-    @media screen and (max-width: 1024px) {
-        flex-direction: column;
-    }
-}
-
-.leftWrapper {
-    width: 40%;
-    @media screen and (max-width: 1024px) {
-        width: 100%;
-    }
-}
-
-.rightWrapper {
-    width: 60%;
-    background-color: var(--dark-green);
-    padding: 40px;
-    @media screen and (max-width: 1024px) {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    @media screen and (min-width: 480px) and (max-width: 768px) {
-        padding: 30px;
-    }
-    @media screen and (max-width: 480px) {
-        padding: 20px;
-    }
-}
-
-.rightWrapper h2 {
-    margin: 40px 0 20px 0;
-}
-
-.rightWrapper p {
-    line-height: 1.5;
-}
-
-.experience {
-    font-size: 50px;
-    font-weight: 700;
-    color: var(--gray);
-    text-align: center;
-    margin: 60px 0;
-    @media screen and (max-width: 480px) {
-        font-size: 30px;
-        margin-top: 20px;
-    }
-}
-
-.logo {
-    background-color: var(--dark-green);
-    height: 600px;
-    font-size: 70px;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    @media screen and (max-width: 768px) {
-        height: 400px;
+    justify-content: center;
+}
+
+.aboutUsHeadingText {
+    font-family: "Montserrat", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    text-align: center;
+    -webkit-text-stroke: 1.5px #fff;
+    opacity: 0.4;
+    text-transform: uppercase;
+    color: transparent;
+    font-family: 'Montserrat-Bold';
+    font-weight: 800;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .aboutUsHeadingText {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutUsHeadingText {
+        font-size: 50px;
+    }
+}
+
+.comment {
+    position: relative;
+    left: 50%;
+    z-index: 100;
+}
+
+.comment::before,
+.comment::after {
+    content: "";
+    position: absolute;
+    border-left: 1px solid white;
+    background-color: white;
+    left: -21px;
+    height: 60vh;
+    width: 1px;
+}
+
+.comment::before {
+    top: 25px;
+}
+
+.comment::after {
+    top: 325px;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: -30px;
+    top: 280px;
+}
+
+@media only screen and (max-width: 1720px) {
+    .comment{
+        display: none;
     }
 }

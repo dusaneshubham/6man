@@ -1,0 +1,23 @@
+.heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    text-align: center;
+    -webkit-text-stroke: 1.5px #fff;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    text-transform: uppercase;
+    height: 70vh;
+    font-family: 'Montserrat-Bold';
+    font-weight: 800;
+}
+
+.titleSubHeading {
+    color: var(--gray);
+    margin-top: 10px;
+    line-height: 1.5;
+    max-width: 50ch;
+}

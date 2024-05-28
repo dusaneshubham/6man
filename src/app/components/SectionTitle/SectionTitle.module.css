@@ -17,6 +17,7 @@
 }
 
 .subHeading {
+    color: var(--gray);
     margin-top: 15px;
     max-width: 50ch;
     line-height: 1.5;

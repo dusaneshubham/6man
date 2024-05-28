@@ -1,62 +1,20 @@
 
-.testimonialGroup{
-    background-color: var(--background-color);
-    color: white;
-}
-.testimonialGroup h2 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.testimonialGroup .sliderWrapperCard {
+.sliderWrapperCard {
     border-radius: 16px;
-    box-shadow: #959da533 0px 8px 24px;
+    box-shadow: #ffffff33 0px 8px 24px;
     padding: 30px 25px;
     margin: 10px;
     border: 1px solid gray;
+    color: white;
+    background-color: black;
 }
 
-.testimonialGroup .sliderWrapperCard h5 {
+.sliderWrapperCard h5 {
     font-size: 20px;
 }
 
-.testimonialGroup .mySwiper {
+.mySwiper {
     padding-bottom: 90px;
-}
-
-.swiperButtonNext:after,
-.swiperButtonPrev:after {
-    font-size: 25px !important;
-    line-height: 1;
-}
-
-.swiperButtonNext,
-.swiperButtonPrev {
-    bottom: 0px;
-    top: auto;
-    color: gray;
-}
-
-.swiperButtonNext {
-    right: 40%;
-}
-
-.swiperButtonPrev {
-    left: 40%;
-}
-
-@media only screen and (max-width: 991.98px) {
-    .swiperButtonNext {
-        right: 20%;
-    }
-
-    .swiperButtonPrev {
-        left: 20%;
-    }
-}
-
-.swiper-pagination-bullet{
-    background-color: white !important;
 }
 
 .starIcon{

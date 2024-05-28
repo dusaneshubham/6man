@@ -1,8 +1,17 @@
+"use client";
+
 import React from 'react'
 import styles from './ServicesSection.module.css'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import ServiceCard from '../ServiceCard/ServiceCard'
-import Script from 'next/script'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import './ServiceSection.css'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import SeoButton from '../SeoButton/SeoButton';
 
 const ServicesSection = () => {
 
@@ -84,35 +93,52 @@ const ServicesSection = () => {
             <div className={`${styles.serviceSectionWrapper} text-center`}>
                 <SectionTitle heading="Preparing For Your Success Provide Best IT Solutions." subHeading={serviceSubHeading} className="pb-0" />
             </div>
-            <section className={styles.testimonialGroup}>
-                <div className="container">
-
-                    <div className="swiper mySwiper">
-                        <div className="swiper-wrapper mb-5">
-                            {
-                                services.length && services.map((service, index) => {
-                                    return (
-                                        <ServiceCard
-                                            img={service?.img}
-                                            title={service.title}
-                                            description={service.description}
-                                            keys={index}
-                                        />
-                                    )
-                                })
-                            }
-                        </div>
-                        <div className="swiper-pagination"></div>
-
-                        <div className={`${styles.swiperButtonPrev} swiper-button-prev`}></div>
-                        <div className={`${styles.swiperButtonNext} swiper-button-next`}></div>
-                    </div>
-                </div>
-            </section >
-
-            <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" async ></Script>
-            <Script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' async></Script>
-            <Script src="/js/swapper.js" defer></Script>
+            <SeoButton />
+            <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                loop={true}
+                slidesPerView="auto"
+                pagination={{ clickable: true }}
+                keyboard={{
+                    enabled: true,
+                }}
+                breakpoints={{
+                    480: {
+                        slidesPerView: 1,
+                    },
+                    756: {
+                        slidesPerView: 2,
+                    },
+                    991: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 25
+                    },
+                    1600: {
+                        slidesPerView: 5,
+                        spaceBetween: 30
+                    }
+                }}
+                className='my-5'
+            >
+                {
+                    services.length && services.map((service, index) => {
+                        return (
+                            <SwiperSlide key={index}>
+                                <ServiceCard
+                                    img={service?.img}
+                                    title={service.title}
+                                    description={service.description}
+                                    indexKey={index}
+                                />
+                            </SwiperSlide>
+                        )
+                    })
+                }
+            </Swiper>
         </>
     )
 }

@@ -12,7 +12,6 @@
 }
 
 .addressWrapper{
-    padding: 0 10px;
     width: 30vw;
 }
 
@@ -65,4 +64,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media only screen and (max-width: 480px){
+    .footer > div{
+        width: 100%;
+    }
 }

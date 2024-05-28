@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './SuccessStorySection.module.css'
 import SectionTitle from '../SectionTitle/SectionTitle'
-import { describe } from 'node:test';
 import StoryCard from '../StoryCard/StoryCard';
 import LanguageSlider from '../LanguageSlider/LanguageSlider';
 
@@ -15,12 +14,12 @@ const SuccessStorySection = () => {
     const stories = [
         {
             img: "/img/story-1.png",
-            desciption: "Ui/Ux & Development Project",
+            description: "Ui/Ux & Development Project",
             year: 2017
         },
         {
             img: "/img/story-2.png",
-            desciption: "Work With Google Project",
+            description: "Work With Google Project",
             year: 2021
         }
     ]
@@ -41,7 +40,7 @@ const SuccessStorySection = () => {
                                 return (
                                     <StoryCard
                                         img={story.img}
-                                        desciption={story.desciption}
+                                        description={story.description}
                                         year={story.year}
                                         keys={index}
                                     />

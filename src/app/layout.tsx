@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config, icon } from "@fortawesome/fontawesome-svg-core";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import Scroller from "./components/Scoller/Scroller";
 config.autoAddCss = false;
 
@@ -33,6 +33,10 @@ export default function RootLayout({
           type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <script
           // you might need to get a newer version
           src="https://kit.fontawesome.com/fbadad80a0.js"
@@ -42,6 +46,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <script src="/js/libraries/three.js"></script>
+        <script src="js/three.js"></script>
         <Scroller />
         <Footer />
       </body>

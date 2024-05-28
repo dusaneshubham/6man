@@ -23,7 +23,7 @@ const BlogsSection = () => {
         {blogsData.length && blogsData.map((blog)=>(
           <div className={styles.blogDiv}>
           <div className={styles.blogImage}>
-            <Image src={blog?.illustration?.url} fill alt={blog?.illustration?.alt} />
+            <img src={blog?.illustration?.url} alt={blog?.illustration?.alt} />
           </div>
           <div className={styles.blogBody}>
             <p className={styles.blogAuthor}><FontAwesomeIcon icon={faUser} /> {blog?.authorName}</p>

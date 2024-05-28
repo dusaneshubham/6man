@@ -75,7 +75,8 @@
     border-radius: 62.5rem;
     color: #fff;
     line-height: 1.42;
-    text-decoration: none
+    text-decoration: none;
+    background: none !important;
 }
 
 .buttonText {
