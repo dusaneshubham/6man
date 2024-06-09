@@ -7,6 +7,7 @@ import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Scroller from "./components/Scoller/Scroller";
+import Loader from "./components/Loader/Loader";
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });

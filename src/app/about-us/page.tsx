@@ -5,10 +5,12 @@ import AboutContainer from '../components/AboutContainer/AboutContainer';
 import { aboutUs } from './aboutUs';
 import { motion } from 'framer-motion';
 import HorizontalLine from '../components/HorizontalLine/HorizontalLine';
+import Loader from '../components/Loader/Loader';
 
 const AboutUs = () => {
   return (
     <>
+      <Loader />
       <div className={styles.aboutUsSectionWrapper}>
         <motion.div
           initial={{ y: -100, opacity: 0 }}
@@ -21,7 +23,7 @@ const AboutUs = () => {
             duration: 0.6
           }}
           className={`${styles.aboutUsHeading}`}>
-          <h1 className={styles.aboutUsHeadingText}>About Us</h1>
+          <h1 className={styles.aboutUsHeadingText}>About<br/>6 Mens Info Tech</h1>
         </motion.div>
         <HorizontalLine />
         <div className={`${styles.aboutUsCards} px-4`}>

@@ -12,6 +12,7 @@ import SectionTitle from '../components/SectionTitle/SectionTitle';
 import SeoButton from '../components/SeoButton/SeoButton';
 import styles from './services.module.css'
 import { motion } from 'framer-motion';
+import Loader from '../components/Loader/Loader';
 
 const Services = () => {
 
@@ -259,6 +260,7 @@ const Services = () => {
 
   return (
     <>
+      <Loader />
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -278,7 +280,7 @@ const Services = () => {
       <div className="service-wrapper" id="service-container">
         <div className="arrow">
           <div className="arrow-img-wrapper">
-            <FontAwesomeIcon icon={faArrowCircleLeft} className="img-fluid dark-arrow" />
+            <FontAwesomeIcon icon={faArrowCircleLeft} className="img-fluid dark-arrow d-none" />
           </div>
         </div>
 
@@ -360,11 +362,57 @@ const Services = () => {
 
         </div>
       </div>
-
-      {/* <script src="js/gsap.min.js" crossOrigin="anonymous"></script>
-      <script src="js/ScrollTrigger.min.js" crossOrigin="anonymous"></script>
-      <script src="js/split-type.min.js" crossOrigin="anonymous"></script>
-      <script src="js/service.js" defer></script> */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          delay: 0.1,
+          y: { type: "spring", stiffness: 60 },
+          ease: "easeInOut",
+          duration: 0.6
+        }}
+        className={styles.tableContent}>
+        <table className="table table-hover">
+          <thead>
+            <motion.tr
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.1,
+                x: { type: "spring", stiffness: 60 },
+                ease: "easeInOut",
+                duration: 0.6
+              }}>
+              <th scope="col">Service</th>
+              <th scope="col">Description</th>
+            </motion.tr>
+          </thead>
+          <tbody>
+            {
+              services.length && services.map((service, index) => {
+                return (
+                  <motion.tr
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      delay: 0.1,
+                      x: { type: "spring", stiffness: 60 },
+                      ease: "easeInOut",
+                      duration: 0.6
+                    }}
+                    key={index}>
+                    <th scope="row">{service.title}</th>
+                    <td>{service.description}</td>
+                  </motion.tr>
+                )
+              })
+            }
+          </tbody>
+        </table>
+      </motion.div>
     </>
   )
 }

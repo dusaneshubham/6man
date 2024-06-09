@@ -21,3 +21,27 @@
     line-height: 1.5;
     max-width: 50ch;
 }
+
+.tableContent {
+    font-size: x-large;
+    color: silver;
+    padding: 30px;
+}
+
+.tableContent table {
+    border: 1px solid white;
+}
+
+.tableContent th {
+    border-right: 1px solid white;
+}
+
+.tableContent table,
+.tableContent tbody,
+.tableContent thead,
+.tableContent tr,
+.tableContent th,
+.tableContent td {
+    background-color: transparent !important;
+    color: white;
+}

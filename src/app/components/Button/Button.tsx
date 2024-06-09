@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './Button.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link';
@@ -13,12 +13,10 @@ interface ButtonProps {
 
 const Button = ({ label, src = '', className = '' }: ButtonProps) => {
 
-  useEffect(() => {
-    (async function () {
-      const calPopUp = await getCalApi({});
-      calPopUp("ui", { "styles": { "branding": { "brandColor": "#000000" } }, "hideEventTypeDetails": false, "layout": "month_view" });
-    })();
-  }, [])
+  const onLinkClick = async () => {
+    const calPopUp = await getCalApi({ namespace: 'cal-pop' });
+    calPopUp("ui", { "styles": { "branding": { "brandColor": "#000000" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+  }
 
   return (
     <div className={`${styles.glowingWrapper} ${styles.glowingWrapperActive} mt-30 ${className}`}>
@@ -32,9 +30,10 @@ const Button = ({ label, src = '', className = '' }: ButtonProps) => {
         <div className={styles.glowingWrapperBorders}></div>
       </div>
       <Link href={src}
-        data-cal-namespace=""
-        data-cal-link="six-man-info-tech/30min"
+        data-cal-namespace="cal-pop"
+        data-cal-link="6-man-info-tech/30min"
         data-cal-config='{"layout":"month_view"}'
+        onClick={onLinkClick}
         className={styles.glowingWrapperButton}>
         <div className={styles.buttonText}>{label}</div>
       </Link>

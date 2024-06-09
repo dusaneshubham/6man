@@ -29,7 +29,9 @@ const TextInput = ({
                     <textarea
                         placeholder={placeholder}
                         onChange={onChange}
+                        rows={7}
                         className={`${styles.input} ${inputClassName}`}
+                        value={value}
                     />
                     :
                     <input
@@ -39,6 +41,7 @@ const TextInput = ({
                         placeholder={placeholder}
                         className={`${styles.input} ${inputClassName}`}
                         onChange={onChange}
+                        required
                     />
             }
 

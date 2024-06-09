@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import SectionWrapper from '../SectionWrapper/SectionWrapper'
 import styles from './Footer.module.css'
-import bg from '../../assets/images/footer-bg.jpeg'
+import bg from '../../assets/images/photorealistic-earth-planet.jpg'
 import Link from 'next/link'
 import { getCurrentYear } from '../../utils/date'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,7 +31,7 @@ const Footer = () => {
         opacity: { duration: 0.2 },
         ease: "easeInOut",
       }}
-      className={`${styles.footerWrapper}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url(${bg.src})` }}>
+      className={`${styles.footerWrapper}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url(${bg.src})` }}>
       <SectionWrapper>
         <div className={styles.footer}>
 

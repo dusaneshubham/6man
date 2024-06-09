@@ -23,38 +23,43 @@
 
 .contactWrapper {
     display: flex;
-    gap: 20px;
-
-    @media screen and (max-width: 768px) {
-        flex-direction: column;
-    }
+    justify-content: center;
+    flex-direction: column;
 }
 
-.contactSectionWrapper::-webkit-scrollbar{
+.contactSectionWrapper::-webkit-scrollbar {
     display: none;
 }
 
-.leftWrapper {
-    width: 50%;
-    height: 500px;
-
-    @media screen and (max-width: 768px) {
-        width: 100%;
-    }
+.upperWrapper {
+    height: fit-content;
 }
 
-.rightWrapper {
+.lowerWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-    padding: 40px;
+}
 
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        padding: 20px;
-    }
+.contactForm {
+    max-width: 800px !important;
+    border: 1px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contactForm .head {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.contactForm .head {
+    padding: 20px 30px 10px 30px;
+}
+
+.contactForm .body {
+    padding: 30px;
 }
 
 .rightWrapper h2 {
@@ -65,24 +70,25 @@
     line-height: 1.5;
 }
 
-.left {
-    height: 100%;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black !important;
-}
-
-.input {
+.input,
+.startProjectButton,
+.loadingButton {
     width: 100%;
     margin: 10px auto;
+    border-radius: 24px !important;
 }
 
 .startProjectButton {
-    margin: 20px auto;
+    color: black !important;
 }
 
-.react-calendar {
-    width: 100%;
+.loadingButton {
+    color: silver !important;
+    border: 1px solid rgba(256, 256, 256, 0.12) !important;
+    background-color: gray !important;
+    cursor: progress !important;
+}
+
+.loadingButton span {
+    position: initial;
 }

@@ -8,10 +8,12 @@ import ClientReview from './components/ClientReview/ClientReview';
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import TeamExpert from './components/TeamExpert/TeamExpert';
 import HorizontalLine from './components/HorizontalLine/HorizontalLine';
+import Loader from './components/Loader/Loader';
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Loader />
       <HomeHeader />
       <HorizontalLine />
       <ServicesSection />

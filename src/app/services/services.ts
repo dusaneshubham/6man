@@ -6,7 +6,7 @@ export const services = [
     },
     title: "Web Design & Development",
     description:
-      "Transforming visions into captivating digital experiences. Elevate your online presence with bespoke website designs tailored just for you.",
+      "Web design focuses on crafting the visual elements and layout of a website.",
   },
   {
     img: {
@@ -15,7 +15,7 @@ export const services = [
     },
     title: "Software Development",
     description:
-      "Crafting code that transforms ideas into seamless solutions. Elevate your digital presence with our expert software development service.",
+      "Software developers design, code, construct, deploy, and maintain software applications, leveraging diverse skills and tools.",
   },
   {
     img: {
@@ -24,7 +24,7 @@ export const services = [
     },
     title: "Mobile Development",
     description:
-      "Unlock the potential of your mobile presence with expert Mobile development tailored to your needs. Let's bring your app vision to life.",
+      "Mobile web development - optimizing web apps for mobile devices is necessary for modern apps. ",
   },
   {
     img: {
@@ -33,7 +33,7 @@ export const services = [
     },
     title: "Data analyst",
     description:
-      "Unlocking insights, driving decisions. Your data, my expertise.",
+      "Analysis involves deconstructing something into its individual elements and asking critical questions like WHY and HOW to draw your own conclusions.",
   },
   {
     img: {
@@ -42,7 +42,7 @@ export const services = [
     },
     title: "IOS developer",
     description:
-      "Unlocking insights, driving decisions. Your data, my expertise.",
+      "Designing and developing advanced applications for the iOS platform. Working with cross-functional teams to define, design, and launch new features.",
   },
   {
     img: {
@@ -51,7 +51,7 @@ export const services = [
     },
     title: "Graphics Design",
     description:
-      "Unlocking insights, driving decisions. Your data, my expertise.",
+      "Graphic design is 'the art and practice of planning and projecting ideas and experiences with visual and textual content'.",
   },
   {
     img: {
@@ -60,7 +60,7 @@ export const services = [
     },
     title: "Web Developer",
     description:
-      "Unlocking insights, driving decisions. Your data, my expertise.",
+      "Web development, also known as website development, encompasses the tasks involved in creating, building, and maintaining websites and web applications that operate online via a browser.",
   },
   {
     img: {
@@ -69,6 +69,6 @@ export const services = [
     },
     title: "E-Commerce Design",
     description:
-      "Unlocking insights, driving decisions. Your data, my expertise.",
+      "An eCommerce website is an online platform where buyers shop for goods and sellers offer products and services.",
   },
 ];
