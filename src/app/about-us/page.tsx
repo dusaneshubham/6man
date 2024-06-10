@@ -23,7 +23,7 @@ const AboutUs = () => {
             duration: 0.6
           }}
           className={`${styles.aboutUsHeading}`}>
-          <h1 className={styles.aboutUsHeadingText}>About<br/>6 Mens Info Tech</h1>
+          <img src="img/logo/6MenAboutUs.png" className='img-fluid' alt="about logo" />
         </motion.div>
         <HorizontalLine />
         <div className={`${styles.aboutUsCards} px-4`}>

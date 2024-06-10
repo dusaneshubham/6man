@@ -74,18 +74,7 @@ const Contact = () => {
 
     if (flag) {
       setLoading(true);
-      await fetch("api/mailsend", {
-        method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        credentials: "same-origin",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow",
-        referrerPolicy: "no-referrer",
-        body: JSON.stringify(contactDetails),
-      })
+      await axios.post("api/mailsend", contactDetails)
         .then(() => {
           setLoading(false);
           setMessage("Message sent successfully!");

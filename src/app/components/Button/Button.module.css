@@ -3,7 +3,8 @@
     display: inline-block;
     pointer-events: all;
     overflow: hidden;
-    border-radius: 62.5rem
+    border-radius: 62.5rem;
+    cursor: pointer;
 }
 
 .glowingWrapper {
@@ -106,9 +107,9 @@
     width: calc(100% + 4px)
 }
 
-.glowingWrapperButton:hover:after {
+/* .glowingWrapperButton:hover:after {
     opacity: .7
-}
+} */
 
 
 .glowingWrapperActive .glowingWrapperAnimations,

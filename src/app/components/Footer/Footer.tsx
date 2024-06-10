@@ -11,14 +11,14 @@ import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK } from '@/app/constants/so
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import Button from '../Button/Button'
 import { motion } from 'framer-motion';
+import { getCalApi } from "@calcom/embed-react";
 
 const Footer = () => {
   const currentYear: number = getCurrentYear();
 
-
   const bookACall = (
     <p className='d-flex align-items-center m-0'>
-      <FontAwesomeIcon icon={faPhone} className='rounded-circle bg-white text-black p-2 mx-3 fs-5' /> Book a Call
+      <FontAwesomeIcon icon={faPhone} className={`${styles.icon} rounded-circle bg-white text-black p-2 mx-3`} /> Book a Call
     </p>
   );
 
@@ -43,13 +43,13 @@ const Footer = () => {
             </p>
             <ul className={styles.footerLinks}>
               <li className={`${styles.footerList} float-start me-3 fs-4`}>
-                <Link href={INSTAGRAM_LINK}><FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} /></Link>
+                <Link href={INSTAGRAM_LINK} target='_blank'><FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} /></Link>
               </li>
               <li className={`${styles.footerList} float-start me-3 fs-4`}>
-                <Link href={FACEBOOK_LINK}><FontAwesomeIcon icon={faFacebook} className={styles.socialIcon} /></Link>
+                <Link href={FACEBOOK_LINK} target='_blank'><FontAwesomeIcon icon={faFacebook} className={styles.socialIcon} /></Link>
               </li>
               <li className={`${styles.footerList} float-start me-3 fs-4`}>
-                <Link href={LINKEDIN_LINK}><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /></Link>
+                <Link href={LINKEDIN_LINK} target='_blank'><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /></Link>
               </li>
             </ul>
           </div>

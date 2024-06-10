@@ -29,14 +29,14 @@ const Button = ({ label, src = '', className = '' }: ButtonProps) => {
       <div className={styles.glowingWrapperBordersMasker}>
         <div className={styles.glowingWrapperBorders}></div>
       </div>
-      <Link href={src}
+      <div
         data-cal-namespace="cal-pop"
         data-cal-link="6-man-info-tech/30min"
         data-cal-config='{"layout":"month_view"}'
         onClick={onLinkClick}
         className={styles.glowingWrapperButton}>
         <div className={styles.buttonText}>{label}</div>
-      </Link>
+      </div>
     </div>
   );
 };
